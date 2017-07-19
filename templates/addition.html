@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="static/modules/vue.js"></script>
+    <link rel="shortcut icon" href="static/img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="static/img/favicon.ico" type="image/x-icon">
+</head>
+<body>
+<div id="service">
+    <label>Number1:</label>
+    <input type="number" placeholder="0" v-bind:number1="number1">
+    <br>
+    <label>Number2:</label>
+    <input type="number" placeholder="0" v-bind:number2="number2">
+    <br>
+    <button @click="getSum">Click</button>
+    <br>
+    <br>
+    <p>{{ result }}</p>
+</div>
+<script src="static/src/addition.js"></script>
+</body>
+</html>
