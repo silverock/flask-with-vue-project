@@ -31,12 +31,12 @@ var service = new Vue({
     result: "0.0"
   },
   methods: {
+    getSumCallback: function(data){
+        this.result = data['response'];
+    },
     getSum: function() {
         var params = '?' + 'number1=' + this.number1 + '&' + 'number2=' + this.number2;
-        function cb(data) {
-            this.result = data['response'];
-        }
-        result = getJSON(api + params, cb)
+        getJSON(api + params, this.getSumCallback)
     }
   }
 })

@@ -10,10 +10,10 @@
 <body>
 <div id="service">
     <label>Number1:</label>
-    <input type="number" placeholder="0" v-bind:number1="number1">
+    <input type="number" placeholder="0" v-model.number="number1" v-bind:value="number1">
     <br>
     <label>Number2:</label>
-    <input type="number" placeholder="0" v-bind:number2="number2">
+    <input type="number" placeholder="0" v-model.number="number2" v-bind:value="number2">
     <br>
     <button @click="getSum">Click</button>
     <br>
