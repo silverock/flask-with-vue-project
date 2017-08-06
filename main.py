@@ -30,8 +30,8 @@ def addition_api():
 @app.app.route(routes.addition)
 def addition():
     """
-    The addition API
-    :return: Response as JSON
+    addition.html
+    :return: Vue template for addition.html
     """
     return render_template('addition.html')
 
