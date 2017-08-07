@@ -6,11 +6,16 @@
     <script src="static/modules/vue.js"></script>
     <link rel="shortcut icon" href="static/img/favicon.ico" type="image/x-icon">
     <link rel="icon" href="static/img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="static/src/styles.css">
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Lato">
 </head>
-<body>
+<body class="background">
+<h1 class="title">My title</h1>
 <div id="app">
-    <p>{{ message }}</p>
-    <a href="/addition">Addition</a>
+    <div class="app-button" onclick="window.location='/addition'">
+        <p>Addition</p>
+        <p class="app-description">{{ message }}</p>
+    </div>
 </div>
 <script src="static/src/main.js"></script>
 </body>

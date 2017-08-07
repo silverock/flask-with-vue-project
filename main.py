@@ -30,7 +30,7 @@ def addition_api():
 @app.app.route(routes.addition)
 def addition():
     """
-    addition.html
+    Gives the `addition` Vue component
     :return: Vue template for addition.html
     """
     return render_template('addition.html')

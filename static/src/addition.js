@@ -1,6 +1,25 @@
-import {getJSON} from "requests";
+"use strict";
+// import { getJSON } from "./requests.js";
 
 var api = '/api/addition';
+
+
+/* Make a GET request which returns a JSON response
+
+   :param theUrl: The URL to make the request to
+   :param callback: A function taking one parameter that will handle the data
+                    returned from the request. The parameter is the data.
+*/
+function getJSON (theUrl, callback) {
+    var xmlHttp = new XMLHttpRequest();
+    xmlHttp.onreadystatechange = function() {
+        if (xmlHttp.readyState == 4 && xmlHttp.status == 200)
+            callback(JSON.parse(xmlHttp.responseText));
+    }
+    xmlHttp.open("GET", theUrl, true); // true for asynchronous
+    xmlHttp.send(null);
+}
+
 
 var service = new Vue({
   el: '#service',

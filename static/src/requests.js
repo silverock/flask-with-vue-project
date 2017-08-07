@@ -21,7 +21,7 @@ function httpGetAsync(theUrl, callback) {
    :param callback: A function taking one parameter that will handle the data
                     returned from the request. The parameter is the data.
 */
-var getJSON = function(theUrl, callback) {
+function getJSON (theUrl, callback) {
     var xmlHttp = new XMLHttpRequest();
     xmlHttp.onreadystatechange = function() {
         if (xmlHttp.readyState == 4 && xmlHttp.status == 200)
@@ -30,3 +30,5 @@ var getJSON = function(theUrl, callback) {
     xmlHttp.open("GET", theUrl, true); // true for asynchronous
     xmlHttp.send(null);
 }
+
+export { getJSON }

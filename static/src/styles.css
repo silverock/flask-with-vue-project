@@ -1,0 +1,21 @@
+.background {
+    background-color: #3CC47C;
+}
+
+.title {
+    color: #EFEFEF;
+    font-family: "Lato", serif;
+    text-align: left;
+    font-weight: bold;
+}
+
+.app-description {
+    text-indent: 25px;
+    color: #EFEFEF;
+}
+
+.app-button {
+    border: 2px solid white;
+    width: 200px;
+    cursor: pointer;
+}
