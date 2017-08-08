@@ -2,15 +2,25 @@
     background-color: #3CC47C;
 }
 
+.title-area {
+    position: fixed;
+    left: 1.5%;
+    top: 42.5%;
+    padding: .4%;
+    line-height: .25;
+}
+
 .title {
     color: #EFEFEF;
     font-family: "Lato", serif;
     text-align: left;
     font-weight: bold;
-    position: fixed;
-    left: 1.5%;
-    top: 42.5%;
-    padding: .4%;
+}
+
+.title-desc {
+    font-family: "Saira", serif;
+    color: #EFEFEF;
+    font-size: 20px;
 }
 
 .app-description {
@@ -24,7 +34,7 @@
     cursor: pointer;
     position: fixed;
     left: 4%;
-    top: 50%;
+    top: 52%;
     font-family: "Saira", serif;
     text-align: center;
     padding: .6%;
