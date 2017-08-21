@@ -2,12 +2,12 @@ import app
 
 from flask import render_template, request, jsonify
 
-import routes
+from accesscontrol import crossdomain
 
 from services.addition import addition_response
 
 
-@app.app.route(routes.index)
+@app.app.route('/')
 def index():
     """
     index.html
@@ -16,7 +16,8 @@ def index():
     return render_template('index.html')
 
 
-@app.app.route(routes.addition_api)
+@app.app.route('/api/addition')
+@crossdomain(origin='http://localhost:8086')
 def addition_api():
     """
     The addition API
@@ -27,7 +28,7 @@ def addition_api():
     return jsonify(addition_response(number1, number2))
 
 
-@app.app.route(routes.addition)
+@app.app.route('/addition')
 def addition():
     """
     Gives the `addition` Vue component
