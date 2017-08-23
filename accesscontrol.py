@@ -68,7 +68,7 @@ def crossdomain(origin=None, methods=None, headers=None,
             h['Access-Control-Max-Age'] = str(max_age)
             if headers is not None:
                 h['Access-Control-Allow-Headers'] = headers
-            print(h)
+
             return resp
 
         f.provide_automatic_options = False
