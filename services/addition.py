@@ -13,7 +13,7 @@ def do_addition(number1, number2):
     """
     try:
         return float(number1) + float(number2)
-    except ZeroDivisionError:
+    except (ZeroDivisionError, ValueError):
         return float('nan')
 
 
